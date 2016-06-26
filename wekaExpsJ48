@@ -1,0 +1,10 @@
+ #!/bin/bash
+        for i in `seq 1 10`;
+        do
+                echo $i
+               
+		java -cp /home/hossam/Downloads/weka-3-9-0/weka.jar  weka.classifiers.trees.J48  -classifications "weka.classifiers.evaluation.output.prediction.CSV"  -s $i -C 0.25 -M 2 -t all_classification-jj-noPrintRun.arff >result$i
+
+
+
+        done 

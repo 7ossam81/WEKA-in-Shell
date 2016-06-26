@@ -1,0 +1,19 @@
+ #!/bin/bash
+
+
+
+        for i in `seq 1 10`;
+        do
+                echo $i
+               
+		java -cp /home/hossam/Desktop/Books/Experiments/weka-3-9-0/weka.jar weka.Run  .Bagging -P 50 -S 1 -I 50 -W  ".J48"   -classifications  "weka.classifiers.evaluation.output.prediction.CSV"  -s $i  -t all_classification-jj-noPrintRun.arff >result$i
+
+
+
+
+
+
+        done 
+
+
+

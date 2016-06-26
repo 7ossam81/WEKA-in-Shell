@@ -1,0 +1,13 @@
+ #!/bin/bash
+export CLASSPATH=/home/hossam/Desktop/Books/Experiments/weka-3-9-0/weka.jar
+
+        for i in `seq 1 10`;
+        do
+                echo $i
+               
+		java -cp /home/hossam/Desktop/Books/Experiments/weka-3-9-0/weka.jar weka.classifiers.functions.SMO -C 50.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.RBFKernel -C 250007 -G 0.01"   -classifications  "weka.classifiers.evaluation.output.prediction.CSV"  -s $i  -t all_classification-jj-noPrintRun.arff >result$i
+
+
+        done 
+
+Can't find class called: weka.classifiers.trees.J48

@@ -1,0 +1,13 @@
+ #!/bin/bash
+        for i in `seq 1 10`;
+        do
+                echo $i
+               
+		java -cp /home/hossam/Downloads/weka-3-9-0/weka.jar weka.classifiers.bayes.NaiveBayes   -classifications "weka.classifiers.evaluation.output.prediction.CSV"  -s $i  -t all_classification-jj-noPrintRun.arff >result$i
+
+
+
+
+
+
+        done 
